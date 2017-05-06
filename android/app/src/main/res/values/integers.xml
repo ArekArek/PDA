@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="location_refresh_time">500</integer>
+    <integer name="location_refresh_distance">1</integer>
+    <integer name="dataRequestsDelayTime">1000</integer>
+    <integer name="informationRequestsDelayTime">120000</integer>
+    <integer name="zoom_animation_time">500</integer>
+    <integer name="zoom_animation_scale">3</integer>
+    <integer name="swipe_animation_duration">300</integer>
+</resources>

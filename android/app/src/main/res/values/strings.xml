@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">PDA</string>
+    <string name="preferences_name">PDA_preferences</string>
+    <string name="preferences_map_url">mapURL</string>
+    <string name="preferences_map_origin">origin</string>
+    <string name="preferences_user_id">user_code</string>
+    <string name="preferences_user_name">user_name</string>
+    <string name="preferences_location_requests_running">loc_req_run</string>
+    <string name="preferences_location_requests_finish">loc_req_fin</string>
+
+    <!--    stargard    -->
+    <string name="top_left_corner_latitude">53.2797</string>
+    <string name="top_left_corner_longitude">14.9385</string>
+    <string name="bottom_right_corner_latitude">53.2577</string>
+    <string name="bottom_right_corner_longitude">14.97775</string>
+
+
+    <string name="main_URI_scheme">https</string>
+
+
+    <string name="main_URI"><!-- there should be uri to backend--></string>
+    <string name="people_append_path">people</string>
+    <string name="id_query_parameter">id</string>
+    <string name="isonline_query_parameter">isOnline</string>
+    <string name="isonline_true">true</string>
+    <string name="information_append_path">information</string>
+    <string name="messages_append_path">messages</string>
+    <string name="default_user_name">anon</string>
+    <string name="country">Poland</string>
+
+</resources>

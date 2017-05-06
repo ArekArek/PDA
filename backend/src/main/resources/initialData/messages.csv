@@ -1,0 +1,4 @@
+id, date, sender, message
+1, 2017-02-03 17:23:11, testSender1, attention - testing
+2, 2017-02-03 17:26:34, testSender2, do you hear that
+3, 2017-02-03 17:26:52, testSender3, hurray, its working

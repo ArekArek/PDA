@@ -1,0 +1,17 @@
+database:
+  driverClass: org.postgresql.Driver
+  user: sa
+  password: sa
+  url: jdbc:postgresql://dbhost/dbname
+
+server:
+  type: simple
+  applicationContextPath: /
+  adminContextPath: /admin
+  connector:
+    type: http
+    port: 2000
+
+peopleExpirationConfiguration:
+  period: 10
+  validityTime: 60

@@ -1,0 +1,4 @@
+id, userId, date, sender, message
+1, 123654, 2017-02-03 17:23:11, testowyNadawca1, pierwsza testowa wiadomosc
+2, 456987, 2017-02-03 17:26:34, testowyNadawca2, odpowiadam Ci test
+3, 357159, 2017-02-03 17:26:52, testowyNadawca1, chyba dziala

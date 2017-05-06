@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="person_json_id">id</string>
+    <string name="person_json_latitude">latitude</string>
+    <string name="person_json_longitude">longitude</string>
+    <string name="person_json_online">online</string>
+    <string name="person_json_label">label</string>
+    <string name="person_initial_label">sample label</string>
+
+    <string name="message_json_user_id">userId</string>
+    <string name="message_json_date">date</string>
+    <string name="message_json_sender">sender</string>
+    <string name="message_json_content">message</string>
+</resources>

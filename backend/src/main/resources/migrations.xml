@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet id="1" author="arka">
+        <createTable tableName="people">
+            <column name="id" type="int">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="latitude" type="double">
+                <constraints nullable="false"/>
+            </column>
+            <column name="longitude" type="double">
+                <constraints nullable="false"/>
+            </column>
+            <column name="isOnline" type="boolean">
+                <constraints nullable="false"/>
+            </column>
+            <column name="label" type="varchar(100)">
+            </column>
+            <column name="expirationDate" type="TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="2" author="arka">
+        <loadUpdateData tableName="people" file="initialData/people.csv" primaryKey="id">
+            <column name="id" type="NUMERIC"/>
+            <column name="latitude" type="NUMERIC"/>
+            <column name="longitude" type="NUMERIC"/>
+            <column name="isOnline" type="BOOLEAN"/>
+            <column name="label" type="STRING"/>
+            <column name="expirationDate" type="TIMESTAMP"/>
+        </loadUpdateData>
+    </changeSet>
+
+    <changeSet id="3" author="arka">
+        <createTable tableName="informations">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="mapURL" type="varchar(500)"/>
+        </createTable>
+        <loadUpdateData tableName="informations" file="initialData/informations.csv"
+                        primaryKey="id">
+            <column name="id" type="NUMERIC"/>
+            <column name="mapURL" type="STRING"/>
+        </loadUpdateData>
+    </changeSet>
+
+    <changeSet id="4" author="arka">
+        <createTable tableName="messages">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="date" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="sender" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="message" type="varchar(1000)">
+            </column>
+        </createTable>
+        <loadUpdateData tableName="messages" primaryKey="id" file="initialData/messages.csv">
+            <column name="id" type="NUMERIC"/>
+            <column name="date" type="TIMESTAMP"/>
+            <column name="sender" type="STRING"/>
+            <column name="message" type="STRING"/>
+        </loadUpdateData>
+    </changeSet>
+
+    <changeSet id="5" author="arka">
+        <addColumn tableName="messages">
+            <column name="userId" type="int"/>
+        </addColumn>
+        <loadUpdateData tableName="messages" primaryKey="id" file="initialData/messagesWithUserId.csv">
+            <column name="id" type="NUMERIC"/>
+            <column name="userId" type="NUMERIC"/>
+            <column name="date" type="TIMESTAMP"/>
+            <column name="sender" type="STRING"/>
+            <column name="message" type="STRING"/>
+        </loadUpdateData>
+    </changeSet>
+
+</databaseChangeLog>
